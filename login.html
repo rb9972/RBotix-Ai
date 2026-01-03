@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RBotix Ai</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <canvas id="matrix"></canvas>
+
+    <div class="signin" id="loginBox">
+        <div class="content">
+            <h2>Access Portal</h2>
+            <div class="form">
+                <div class="inputBox">
+                    <input type="text" id="username" required="required">
+                    <i>Username</i>
+                </div>
+                <div class="inputBox">
+                    <input type="password" required="required">
+                    <i>Password</i>
+                </div>
+                <input type="submit" value="Enter System" onclick="login()">
+            </div>
+        </div>
+    </div>
+
+    <div class="chat-container" id="chatRoom">
+        <div class="chat-header">
+            <div>
+                <span class="status-dot"></span>
+                <span id="welcomeUser">USER: ACCESSING...</span>
+            </div>
+            <button class="destruct-btn" onclick="selfDestruct()">WIPE DATA</button>
+        </div>
+        <div class="chat-box" id="chatBox"></div>
+        <div id="aiStatus">STATUS: <span id="typingStatus">IDLE</span></div>
+        <div class="input-area">
+            <input type="text" id="userMsgInput" placeholder="Talk to RBotix..." autocomplete="off" onkeypress="handleKeyPress(event)">
+            <button id="sendBtn" onclick="processChat()">SEND</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
